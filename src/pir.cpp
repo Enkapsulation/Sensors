@@ -1,6 +1,6 @@
 #include <iostream>
-#include <wiringPi.h>
-#include "SensorClass.hpp"
+#include "../WiringPi/wiringPi/wiringPi.h"
+#include "sensor_interface.hpp"
 
 #include "dbg_trace.hpp"
 

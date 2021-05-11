@@ -18,8 +18,11 @@ set(CMAKE_CXX_FLAGS " ")
 # main file
 set(MAIN ${CMAKE_SOURCE_DIR}/src/pir.cpp)
 
+#shared module dir
+set(SHARED_MODULE_DIR $(CMAKE_SOURCE_DIR)/shared_folder)
+
 #SensorInterface
-set(SENSOR_INTERFACE_DIR ${CMAKE_SOURCE_DIR}/sensor_interface)
+set(SENSOR_INTERFACE_DIR ${SHARED_MODULE_DIR}/sensor_interface)
 set(SENSOR_INTERFACE ${SENSOR_INTERFACE_DIR}/sensor_interface.hpp)
 
 #PIRClass
@@ -27,7 +30,7 @@ set(PIR_CLASS_DIR ${CMAKE_SOURCE_DIR}/src/pir_class)
 set(PIR_CLASS ${PIR_CLASS_DIR}/PIRClass.hpp ${PIR_CLASS_DIR}/PIRClass.cpp)
 
 #dbg_trace
-set(DBG_TRACE_DIR ${CMAKE_SOURCE_DIR}/src/dbg_trace)
+set(DBG_TRACE_DIR ${CMAKE_SOURCE_DIR}/shared_folder/dbg_trace)
 set(DEBUG_TRACE ${DBG_TRACE_DIR}/dbg_trace.hpp ${DBG_TRACE_DIR}/dbg_trace.cpp ${DBG_TRACE_DIR}/dbg_trace_types.hpp)
 
 # add the executable

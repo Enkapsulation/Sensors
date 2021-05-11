@@ -1,0 +1,3 @@
+[submodule "shared_folder"]
+	path = shared_folder
+	url = https://github.com/Enkapsulation/shared_module.git
