@@ -46,7 +46,9 @@ class PIR : public Sensor, public MQTT
 		/*
 		 *	MQTT Api
 		 */
-		void pushStatus();
+		void initMQTT();
+		void pushStatus() override {};
+		void pushStatus(const std::string msg);
 
 		~PIR() {};
 };

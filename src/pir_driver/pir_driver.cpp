@@ -72,18 +72,23 @@ void PIR::Debug(bool actual_state, size_t& iterator)
 
 /*============================[MQTT Api	]=====================================*/
 
-void PIR::pushStatus(mqtt::async_client client, const std::string msg)
+void PIR::pushStatus(const std::string msg)
 {
    try{
       DbgTrace(INFO) << "[?] Sending message" << "\n";
 	   mqtt::message_ptr publish_message = mqtt::make_message(m_topic, msg);
+      
 	   publish_message->set_qos(m_QoS);
-	   client.publish(publish_message);
+      MQTT::client.publish(publish_message);
 	   DbgTrace(INFO) << "[+] Message sent" << "\n";
    }
    catch (const mqtt::exception& exc) {
-		cerr << exc.what() << endl;
-		return 1;
+		std::cerr << exc.what() << std::endl;
 	}
 	
+}
+
+void PIR::initMQTT()
+{
+   
 }

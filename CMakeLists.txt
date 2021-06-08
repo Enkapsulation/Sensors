@@ -34,7 +34,7 @@ set(DBG_TRACE_DIR ${SHARED_MODULE_DIR}/dbg_trace)
 set(DEBUG_TRACE ${DBG_TRACE_DIR}/dbg_trace.hpp ${DBG_TRACE_DIR}/dbg_trace.cpp ${DBG_TRACE_DIR}/dbg_trace_types.hpp)
 
 #mqtt
-set(MQTT_DIR ${SOURCE_DIR}/MQTT)
+set(MQTT_DIR ${SHARED_MODULE_DIR}/MQTT)
 set(MQTT ${MQTT_DIR}/mqtt.hpp ${MQTT_DIR}/mqtt.cpp)
 
 #mqtt library
